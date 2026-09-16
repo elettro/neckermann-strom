@@ -13,18 +13,15 @@
     .kaffee-hero p{max-width:820px;font-size:20px;line-height:1.55;color:#476057}
     .kicker{font-weight:850;letter-spacing:.12em;text-transform:uppercase;color:#0a8d36}
     .kaffee-gallery{padding:54px 0 80px}
-    .kaffee-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+    .kaffee-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;align-items:start}
     .kaffee-card{margin:0;background:#fff;border:1px solid rgba(3,63,44,.1);border-radius:18px;overflow:hidden;box-shadow:0 10px 30px rgba(3,63,44,.07)}
     .kaffee-card button{display:block;width:100%;border:0;padding:0;background:#edf3ee;cursor:zoom-in}
-    .sprite-view{width:100%;aspect-ratio:1/1;background-image:url('../assets/kaffee/kaffee-sprite.webp');background-size:300% 300%;background-repeat:no-repeat;background-color:#f4f5ef}
+    .kaffee-card img{display:block;width:100%;height:auto;max-height:520px;object-fit:contain;background:#f4f5ef}
     .kaffee-card figcaption{padding:14px 16px 16px;font-weight:780;color:#123e31}
     .kaffee-card:hover{transform:translateY(-3px);transition:.18s ease;box-shadow:0 16px 38px rgba(3,63,44,.12)}
-    .p1{background-position:0% 0%}.p2{background-position:50% 0%}.p3{background-position:100% 0%}
-    .p4{background-position:0% 50%}.p5{background-position:50% 50%}.p6{background-position:100% 50%}
-    .p7{background-position:0% 100%}.p8{background-position:50% 100%}.p9{background-position:100% 100%}
     .lightbox{position:fixed;inset:0;z-index:9999;display:none;place-items:center;background:rgba(0,20,13,.94);padding:28px}
     .lightbox.open{display:grid}
-    .lightbox-art{width:min(90vw,900px);aspect-ratio:1/1;background-image:url('../assets/kaffee/kaffee-sprite.webp');background-size:300% 300%;background-repeat:no-repeat;background-color:#f4f5ef;border-radius:14px;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+    .lightbox img{display:block;width:auto;height:auto;max-width:94vw;max-height:91vh;object-fit:contain;border-radius:14px;box-shadow:0 30px 80px rgba(0,0,0,.5);background:#fff}
     .lightbox-close{position:fixed;top:18px;right:22px;width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.35);background:rgba(0,0,0,.35);color:#fff;font-size:30px;cursor:pointer}
     @media(max-width:900px){.kaffee-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
     @media(max-width:580px){.kaffee-grid{grid-template-columns:1fr}.kaffee-hero{padding-top:42px}}
@@ -47,24 +44,24 @@
     </section>
     <section class="kaffee-gallery shell">
       <div class="kaffee-grid">
-        <figure class="kaffee-card"><button type="button" data-pos="p1" aria-label="Kaffee-Konzept Übersicht vergrößern"><div class="sprite-view p1" role="img" aria-label="Kaffee-Konzept Übersicht"></div></button><figcaption>Kaffee-Konzept Übersicht</figcaption></figure>
-        <figure class="kaffee-card"><button type="button" data-pos="p2" aria-label="Feine Crema vergrößern"><div class="sprite-view p2" role="img" aria-label="Feine Crema"></div></button><figcaption>Feine Crema</figcaption></figure>
-        <figure class="kaffee-card"><button type="button" data-pos="p3" aria-label="Büro Mischung vergrößern"><div class="sprite-view p3" role="img" aria-label="Büro Mischung"></div></button><figcaption>Büro Mischung</figcaption></figure>
-        <figure class="kaffee-card"><button type="button" data-pos="p4" aria-label="Privatlabel Kaffee vergrößern"><div class="sprite-view p4" role="img" aria-label="Privatlabel Kaffee"></div></button><figcaption>Privatlabel Kaffee</figcaption></figure>
-        <figure class="kaffee-card"><button type="button" data-pos="p5" aria-label="Hausmischung vergrößern"><div class="sprite-view p5" role="img" aria-label="Hausmischung"></div></button><figcaption>Hausmischung</figcaption></figure>
-        <figure class="kaffee-card"><button type="button" data-pos="p6" aria-label="Espresso Mischung vergrößern"><div class="sprite-view p6" role="img" aria-label="Espresso Mischung"></div></button><figcaption>Espresso Mischung</figcaption></figure>
-        <figure class="kaffee-card"><button type="button" data-pos="p7" aria-label="Messestand Galerie 01 vergrößern"><div class="sprite-view p7" role="img" aria-label="Messestand Galerie 01"></div></button><figcaption>Messestand Galerie 01</figcaption></figure>
-        <figure class="kaffee-card"><button type="button" data-pos="p8" aria-label="Messestand Galerie 02 vergrößern"><div class="sprite-view p8" role="img" aria-label="Messestand Galerie 02"></div></button><figcaption>Messestand Galerie 02</figcaption></figure>
-        <figure class="kaffee-card"><button type="button" data-pos="p9" aria-label="Messestand Galerie 03 vergrößern"><div class="sprite-view p9" role="img" aria-label="Messestand Galerie 03"></div></button><figcaption>Messestand Galerie 03</figcaption></figure>
+        <figure class="kaffee-card"><button type="button" data-image="neckermann-strom-kaffee- (1).png" aria-label="Kaffee-Konzept 01 vergrößern"><img loading="lazy" src="neckermann-strom-kaffee- (1).png" alt="Neckermann Strom Kaffee-Konzept 01"></button><figcaption>Kaffee-Konzept 01</figcaption></figure>
+        <figure class="kaffee-card"><button type="button" data-image="neckermann-strom-kaffee- (2).png" aria-label="Kaffee-Konzept 02 vergrößern"><img loading="lazy" src="neckermann-strom-kaffee- (2).png" alt="Neckermann Strom Kaffee-Konzept 02"></button><figcaption>Kaffee-Konzept 02</figcaption></figure>
+        <figure class="kaffee-card"><button type="button" data-image="neckermann-strom-kaffee- (3).png" aria-label="Kaffee-Konzept 03 vergrößern"><img loading="lazy" src="neckermann-strom-kaffee- (3).png" alt="Neckermann Strom Kaffee-Konzept 03"></button><figcaption>Kaffee-Konzept 03</figcaption></figure>
+        <figure class="kaffee-card"><button type="button" data-image="neckermann-strom-kaffee- (4).png" aria-label="Kaffee-Konzept 04 vergrößern"><img loading="lazy" src="neckermann-strom-kaffee- (4).png" alt="Neckermann Strom Kaffee-Konzept 04"></button><figcaption>Kaffee-Konzept 04</figcaption></figure>
+        <figure class="kaffee-card"><button type="button" data-image="neckermann-strom-kaffee- (5).png" aria-label="Kaffee-Konzept 05 vergrößern"><img loading="lazy" src="neckermann-strom-kaffee- (5).png" alt="Neckermann Strom Kaffee-Konzept 05"></button><figcaption>Kaffee-Konzept 05</figcaption></figure>
+        <figure class="kaffee-card"><button type="button" data-image="neckermann-strom-kaffee- (6).png" aria-label="Kaffee-Konzept 06 vergrößern"><img loading="lazy" src="neckermann-strom-kaffee- (6).png" alt="Neckermann Strom Kaffee-Konzept 06"></button><figcaption>Kaffee-Konzept 06</figcaption></figure>
+        <figure class="kaffee-card"><button type="button" data-image="neckermann-strom-kaffee- (7).png" aria-label="Kaffee-Konzept 07 vergrößern"><img loading="lazy" src="neckermann-strom-kaffee- (7).png" alt="Neckermann Strom Kaffee-Konzept 07"></button><figcaption>Kaffee-Konzept 07</figcaption></figure>
+        <figure class="kaffee-card"><button type="button" data-image="neckermann-strom-kaffee- (8).png" aria-label="Kaffee-Konzept 08 vergrößern"><img loading="lazy" src="neckermann-strom-kaffee- (8).png" alt="Neckermann Strom Kaffee-Konzept 08"></button><figcaption>Kaffee-Konzept 08</figcaption></figure>
+        <figure class="kaffee-card"><button type="button" data-image="neckermann-strom-kaffee- (9).png" aria-label="Kaffee-Konzept 09 vergrößern"><img loading="lazy" src="neckermann-strom-kaffee- (9).png" alt="Neckermann Strom Kaffee-Konzept 09"></button><figcaption>Kaffee-Konzept 09</figcaption></figure>
       </div>
     </section>
   </main>
   <footer class="footer"><div class="footer-row shell"><strong>Neckermann Strom</strong><span>Internal brand resource</span></div></footer>
-  <div class="lightbox" id="kaffee-lightbox" role="dialog" aria-modal="true" aria-label="Bildansicht"><button class="lightbox-close" type="button" aria-label="Schließen">×</button><div class="lightbox-art" role="img" aria-label="Vergrößerte Kaffee-Ansicht"></div></div>
+  <div class="lightbox" id="kaffee-lightbox" role="dialog" aria-modal="true" aria-label="Bildansicht"><button class="lightbox-close" type="button" aria-label="Schließen">×</button><img alt="Vergrößerte Kaffee-Ansicht"></div>
   <script>
-    const lb=document.getElementById('kaffee-lightbox'),art=lb.querySelector('.lightbox-art');
-    document.querySelectorAll('[data-pos]').forEach(b=>b.addEventListener('click',()=>{art.className='lightbox-art '+b.dataset.pos;lb.classList.add('open');document.body.style.overflow='hidden'}));
-    function closeLB(){lb.classList.remove('open');art.className='lightbox-art';document.body.style.overflow=''}
+    const lb=document.getElementById('kaffee-lightbox'),lbImg=lb.querySelector('img');
+    document.querySelectorAll('[data-image]').forEach(b=>b.addEventListener('click',()=>{lbImg.src=b.dataset.image;lb.classList.add('open');document.body.style.overflow='hidden'}));
+    function closeLB(){lb.classList.remove('open');lbImg.src='';document.body.style.overflow=''}
     lb.querySelector('.lightbox-close').addEventListener('click',closeLB);
     lb.addEventListener('click',e=>{if(e.target===lb)closeLB()});
     document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLB()});
