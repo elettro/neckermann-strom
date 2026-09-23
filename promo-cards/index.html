@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Neckermann Strom und SolarMeister: Visitenkarten, Postkarten und Promo Cards zur Kundenfreigabe.">
+<meta name="robots" content="noindex,nofollow,noarchive,nosnippet,noimageindex">
+<meta name="theme-color" content="#073d2c">
+<title>Promo Cards | Neckermann Strom × SolarMeister</title>
+<link rel="stylesheet" href="../styles.css"><link rel="stylesheet" href="promo-cards.css">
+</head>
+<body>
+<header class="site-header"><nav class="nav shell" aria-label="Primary navigation">
+<a class="brand" href="../" aria-label="Neckermann Strom home"><img src="../assets/neckermann-strom-logo.webp" alt="Neckermann Strom"></a>
+<div class="nav-links"><a href="../">Brand Hub</a><a href="../footer/">Footer Gallery</a><a href="../contest/">Contest Planning</a><a href="../instant-winner/">Instant Winner</a><a href="../kaffee/">Kaffee</a><a href="./" aria-current="page">Promo Cards</a></div>
+</nav></header>
+<main>
+<section class="pc-hero"><div class="shell pc-hero-inner"><div>
+<a href="../" class="pc-back">← Zurück zum Brand Hub</a>
+<div class="pc-eyebrow">NECKERMANN STROM × SOLARMEISTER · DESIGN REVIEW</div>
+<h1>Promo <span>Cards.</span></h1>
+<p>Alle Kartenentwürfe an einem Ort. Vergleichen Sie die Varianten, betrachten Sie jedes Motiv in Originalgröße und merken Sie Ihre Favoriten vor.</p>
+<div class="pc-hero-actions"><a class="pc-btn pc-btn-primary" href="#galerie">Alle Entwürfe ansehen ↓</a><a class="pc-btn pc-btn-ghost" target="_blank" rel="noopener noreferrer" href="https://github.com/elettro/solarmeister/tree/main/cards">Originalordner ↗</a></div>
+<div class="pc-stats"><div><b>15</b><span>Bildvorschauen</span></div><div><b>4</b><span>Designserien</span></div><div><b>1</b><span>Datei zu prüfen</span></div></div>
+</div><div class="pc-hero-image"><img src="https://raw.githubusercontent.com/elettro/solarmeister/main/cards/postcards-1%20(1).png" alt="Postkarten-Entwurf von Neckermann Strom und SolarMeister"><div class="pc-image-caption"><span>Designpräsentation</span><span>2026</span></div></div></div></section>
+<div class="pc-filter-band" id="galerie"><div class="shell pc-filter-inner"><strong>DESIGNS ANSEHEN</strong><div class="pc-filters" role="group" aria-label="Entwürfe filtern">
+<button type="button" class="pc-filter" data-filter="all" aria-pressed="true">Alle Motive <small>15</small></button>
+<button type="button" class="pc-filter" data-filter="post" aria-pressed="false">Postkarten <small>5</small></button>
+<button type="button" class="pc-filter" data-filter="dual" aria-pressed="false">Duo-Branding <small>5</small></button>
+<button type="button" class="pc-filter" data-filter="single" aria-pressed="false">Einzelmarke <small>4</small></button>
+<button type="button" class="pc-filter" data-filter="extra" aria-pressed="false">Zusatzmotiv <small>1</small></button>
+</div></div></div>
+<div class="shell pc-main">
+<div class="pc-intro"><div><div class="pc-eyebrow" style="color:#39942b">KONZEPTAUSWAHL</div><h2>Vergleichen. Auswählen. Freigeben.</h2></div><p>Öffnen Sie jedes Motiv per Klick in der Großansicht. Markieren Sie interessante Entwürfe mit „Vormerken“ und kopieren Sie Ihre Auswahl für die Abstimmung.</p></div>
+<div id="collections"><noscript>Zur Darstellung der Entwürfe muss JavaScript aktiviert sein. <a href="https://github.com/elettro/solarmeister/tree/main/cards">Alle Quelldateien auf GitHub ansehen.</a></noscript></div>
+<aside class="pc-note"><div style="font-size:25px;color:#398729" aria-hidden="true">ⓘ</div><div><h2>Hinweis zur Druckfreigabe</h2><p>Die Galerie zeigt digitale Gestaltungskonzepte und keine finalen Druckdateien. Beschnitt, Farbprofil, Kontaktdaten und Druckmaße vor Produktion gesondert prüfen. Eine PNG-Datei im Quellordner enthält keine Bilddaten und wird unten entsprechend markiert.</p></div></aside>
+</div></main>
+<footer class="footer"><div class="footer-row shell"><strong>Neckermann Strom × SolarMeister</strong><span>Interne Designpräsentation · <a href="../">Brand Hub</a></span></div></footer>
+<div class="pc-shortlist" id="shortlist" hidden role="status"><span id="shortlist-count">0 Motive vorgemerkt</span><button type="button" id="copy-list">Auswahl kopieren</button><button type="button" id="clear-list" aria-label="Auswahl zurücksetzen">×</button></div>
+<div class="pc-modal" id="viewer" hidden role="dialog" aria-modal="true" aria-label="Motiv in voller Größe"><div class="pc-modal-head"><span id="viewer-title">Entwurf</span><div><a id="viewer-original" href="#" target="_blank" rel="noopener noreferrer">Original öffnen ↗</a><button type="button" id="viewer-close" aria-label="Schließen">×</button></div></div><button type="button" id="viewer-prev" class="pc-arrow pc-prev" aria-label="Vorheriges Motiv">‹</button><img id="viewer-image" src="" alt=""><button type="button" id="viewer-next" class="pc-arrow pc-next" aria-label="Nächstes Motiv">›</button><span id="viewer-count" class="pc-modal-counter"></span></div>
+<script>
+(function(){
+"use strict";
+var root="https://raw.githubusercontent.com/elettro/solarmeister/main/cards/";
+var git="https://github.com/elettro/solarmeister/blob/main/cards/";
+function numbers(pattern){return Array.from({length:5},function(_,i){return pattern.replace("#",String(i+1));});}
+var groups=[
+ {id:"post",title:"Postkarten",kicker:"01 / KAMPAGNENMATERIAL",desc:"Fünf Postkarten-Konzepte für Neckermann Strom und SolarMeister.",files:numbers("postcards-1 (#).png")},
+ {id:"dual",title:"Visitenkarten · Zwei Marken",kicker:"02 / VISITENKARTEN",desc:"Fünf Entwürfe mit beiden Marken für Vorder- und Rückseiten.",files:numbers("business-cards- (#).png")},
+ {id:"single",title:"Visitenkarten · Einzelmarke",kicker:"03 / VISITENKARTEN",desc:"Vier verfügbare Entwürfe. Die erste Datei ist unvollständig und zur Prüfung markiert.",files:numbers("buisness-cards-single-brand-1 (#).png")},
+ {id:"extra",title:"Zusätzlicher Kartenentwurf",kicker:"04 / EINZELANSICHT",desc:"Separater Vorder- und Rückseitenentwurf aus dem Originalordner.",files:["neckermann-front-back-v1"]}
+];
+var all=[],store=document.getElementById("collections");
+groups.forEach(function(group){
+ var section=document.createElement("section");section.className="pc-group";section.id=group.id;section.dataset.group=group.id;
+ var count=group.files.length-(group.id==="single"?1:0);
+ section.innerHTML='<div class="pc-group-head"><div><div class="pc-eyebrow" style="color:#41992b">'+group.kicker+'</div><h2>'+group.title+'</h2><p>'+group.desc+'</p></div><span class="pc-count">'+count+' Motive</span></div>';
+ var grid=document.createElement("div");grid.className="pc-grid";
+ group.files.forEach(function(name,i){
+  var title=(group.id==="post"?"Postkarte":group.id==="dual"?"Visitenkarte · Duo":group.id==="single"?"Visitenkarte · Einzelmarke":"Einzelentwurf")+" / "+String(i+1).padStart(2,"0");
+  var broken=group.id==="single"&&i===0;
+  var src=root+encodeURIComponent(name),original=git+encodeURIComponent(name),card=document.createElement("article");card.className="pc-card";
+  if(broken){card.innerHTML='<div class="pc-broken"><b>!</b><strong>Datei nicht lesbar</strong><span>Die Datei enthält keine Bilddaten (2 Byte).</span></div><div class="pc-card-info"><div><small>QUELldATEI PRÜFEN</small><h3>'+title+'</h3><div class="pc-filename">'+name+'</div></div><a class="pc-original" href="'+original+'" target="_blank" rel="noopener noreferrer">Auf GitHub prüfen ↗</a></div>';}
+  else{
+   card.innerHTML='<button type="button" class="pc-preview" aria-label="'+title+' groß anzeigen"><img loading="lazy" decoding="async" src="'+src+'" alt="'+title+'"><span class="pc-zoom">Ansicht vergrößern ↗</span></button><div class="pc-card-info"><div><small>'+group.kicker+'</small><h3>'+title+'</h3><div class="pc-filename">'+name+'</div></div><div class="pc-card-buttons"><button type="button" class="pc-favorite" aria-pressed="false">☆ Vormerken</button><a class="pc-original" href="'+original+'" target="_blank" rel="noopener noreferrer">Original ↗</a></div></div>';
+   var data={title:title,name:name,src:src,original:original,button:card.querySelector(".pc-preview")};all.push(data);
+   data.button.addEventListener("click",function(){open(data);});
+   card.querySelector(".pc-preview img").addEventListener("error",function(){this.alt="Vorschau nicht erreichbar. Über Original-Link öffnen.";this.style.display="none";card.querySelector(".pc-zoom").textContent="Originaldatei auf GitHub prüfen ↗";});
+   card.querySelector(".pc-favorite").addEventListener("click",function(){var idx=saved.indexOf(name);if(idx<0)saved.push(name);else saved.splice(idx,1);refresh();});
+  }
+  grid.appendChild(card);
+ });
+ section.appendChild(grid);store.appendChild(section);
+});
+document.querySelectorAll(".pc-filter").forEach(function(btn){btn.addEventListener("click",function(){var id=btn.dataset.filter;document.querySelectorAll(".pc-filter").forEach(function(other){other.setAttribute("aria-pressed",String(other===btn));});document.querySelectorAll(".pc-group").forEach(function(sec){sec.hidden=id!=="all"&&sec.dataset.group!==id;});});});
+var viewer=document.getElementById("viewer"),vimg=document.getElementById("viewer-image"),vtitle=document.getElementById("viewer-title"),vorig=document.getElementById("viewer-original"),vcount=document.getElementById("viewer-count"),current=0,lastFocus=null;
+function visible(){return all.filter(function(x){return !x.button.closest(".pc-group").hidden;});}
+function display(data){var arr=visible();current=arr.indexOf(data);vimg.src=data.src;vimg.alt=data.title;vtitle.textContent=data.title;vorig.href=data.original;vcount.textContent=(current+1)+" / "+arr.length;}
+function open(data){lastFocus=data.button;display(data);viewer.hidden=false;document.body.style.overflow="hidden";document.getElementById("viewer-close").focus();}
+function close(){viewer.hidden=true;vimg.removeAttribute("src");document.body.style.overflow="";if(lastFocus)lastFocus.focus();}
+function step(n){var arr=visible();if(arr.length)display(arr[(current+n+arr.length)%arr.length]);}
+document.getElementById("viewer-close").addEventListener("click",close);
+document.getElementById("viewer-prev").addEventListener("click",function(){step(-1);});
+document.getElementById("viewer-next").addEventListener("click",function(){step(1);});
+viewer.addEventListener("click",function(ev){if(ev.target===viewer)close();});
+document.addEventListener("keydown",function(ev){if(viewer.hidden)return;if(ev.key==="Escape")close();if(ev.key==="ArrowRight")step(1);if(ev.key==="ArrowLeft")step(-1);});
+var key="neckermann-promo-cards-review-v1",saved=[];
+try{saved=JSON.parse(localStorage.getItem(key)||"[]");if(!Array.isArray(saved))saved=[];}catch(err){saved=[];}
+var tray=document.getElementById("shortlist");
+function refresh(){document.querySelectorAll(".pc-favorite").forEach(function(btn){var name=btn.closest(".pc-card").querySelector(".pc-filename").textContent,marked=saved.includes(name);btn.setAttribute("aria-pressed",String(marked));btn.textContent=marked?"★ Vorgemerkt":"☆ Vormerken";});tray.hidden=saved.length===0;document.getElementById("shortlist-count").textContent=saved.length+" Motive vorgemerkt";try{localStorage.setItem(key,JSON.stringify(saved));}catch(err){}}
+document.getElementById("clear-list").addEventListener("click",function(){saved=[];refresh();});
+document.getElementById("copy-list").addEventListener("click",function(){var val="Neckermann Strom × SolarMeister – Promo Cards\n"+saved.map(function(name,i){return(i+1)+". "+name;}).join("\n");if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(val).then(function(){document.getElementById("copy-list").textContent="Kopiert ✓";},function(){window.prompt("Auswahl kopieren:",val);});else window.prompt("Auswahl kopieren:",val);});
+refresh();
+})();
+</script>
+</body></html>
